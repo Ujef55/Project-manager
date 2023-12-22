@@ -1,4 +1,5 @@
 import ProjectSidebar from "./Components/ProjectSidebar";
+import NewProject from "./Components/NewProject";
 
 function App() {
   return (
@@ -6,6 +7,7 @@ function App() {
       <main className="h-screen my-8">
           <ProjectSidebar />
       </main>
+      <NewProject />
     </>
   );
 }
