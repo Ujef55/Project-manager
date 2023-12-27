@@ -1,4 +1,4 @@
-function selectedProject( {projects} ) {
+function selectedProject( {projects, onDelete} ) {
 
     const formattedDate = new Date(projects.dueDate).toLocaleDateString('en-US', {
         year: 'numeric',
@@ -11,7 +11,7 @@ function selectedProject( {projects} ) {
             <header className="pb-4 mb-4 border-b-2 border-stone-300">
                 <div className="flex items-center justify-between">
                     <h1 className="text-3xl font-bold text-stone-600 mb-2">{projects.title}</h1>
-                    <button className="text-stone-600 hover:text-stone-950">
+                    <button onClick={onDelete} className="text-stone-600 hover:text-stone-950">
                         Delete
                     </button>
                 </div>
